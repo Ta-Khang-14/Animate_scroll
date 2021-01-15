@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scrollBar"></div>
+    <div class="scrollThumb"></div>
+    <section class="section-one">
+        <h1>Animation</h1>
+    </section>
+    <section class="section-two">
+        <h3>TEST Animation</h3>
+    </section>
+<script type="text/javascript">
+    var scrollThumb = document.querySelector('.scrollThumb');
+    var totalHeight = document.body.scrollHeight - window.innerHeight;
+    console.log(scrollThumb);
+    console.log(totalHeight);
+    window.onscroll = function(){
+        let scrollThumbHeight = (window.scrollY/totalHeight) * 100;
+        scrollThumb.style.height = `${scrollThumbHeight}%`;
+    }
+
+</script>
+</body> 
+</html>

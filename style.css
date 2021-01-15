@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'monospace', sans-serif;
+}
+.section-one{
+    height: 100vh;
+    background: url('https://thietbiketnoi.com/wp-content/uploads/2020/01/tong-hop-hinh-nen-background-vector-designer-dep-do-phan-giai-fhd-2k-4k-moi-nhat-2.jpg');
+}
+.section-two{
+    height: 100vh;
+    background: url('https://inlonggia.com/wp-content/uploads/Background-dep-vector.jpg');
+}
+section{
+    text-align: center;
+}
+section h1,h3{
+    color: azure;
+    font-size: 2em;
+    font-weight: bold;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.scrollBar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.05);
+}
+.scrollThumb{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: -webkit-linear-gradient(to top, #1565C0, #b92b27);  
+    background: linear-gradient(to top, #1565C0, #b92b27); 
+    animation: anime 5s linear infinite;
+}
+@keyframes anime{
+    0%,100%{
+        filter: hue-rotate(0);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
+.scrollThumb::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(to top, #1565C0, #b92b27);  
+    background: linear-gradient(to top, #1565C0, #b92b27);
+    filter: blur(10px);
+}
